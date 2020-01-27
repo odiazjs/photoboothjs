@@ -61,8 +61,7 @@ let button;
         width: 320,
         height: 240,
         image_format: "jpeg",
-        jpeg_quality: 90,
-        force_flash: true
+        jpeg_quality: 90
       });
       Webcam.attach("#teamVideo");
     }, 500);

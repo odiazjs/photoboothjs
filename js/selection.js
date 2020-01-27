@@ -55,7 +55,7 @@
       playerContainers.forEach(container => {
         if (container.classList.contains("grow")) {
             animateCSS(container, 'fadeOutRight', () => {
-                window.location.href = `${window.location.href}/pages/photo.html`;
+                window.location.href = window.location.href.replace('selection.html', 'photo.html');
             });
         }
       });

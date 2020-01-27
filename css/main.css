@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/BebasNeue-Regular.otf');
+}
+
+video {
+    object-fit: cover !important;
+    position: relative;
+    z-index: -4000;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas {
+    width: 900px !important;
+    position: absolute;
+    height: 1100px !important;
+    margin: -23em -5em;
+    z-index: -500;
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+h2 {
+    font-size: 6vw;
+}
+
+h3 {
+    font-size: 4vw;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: white;
+    margin: 42px 0px !important;
+    font-family: 'Bebas Neue', Fallback, sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #EDBC00;
+    background-image: url('../assets//stadium.png');
+    background-position: unset; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    font-family: 'Bebas Neue', Fallback, sans-serif;
+}
+
+.box {
+    padding: 8px !important;
+    background: transparent !important;
+    border: 0px solid #FFF !important;
+}
+
+.box-row {
+    padding: 8px !important;
+    background: transparent !important;
+    border: 0px solid #FFF !important;
+}
+
+.title-light {
+    letter-spacing: 10px;
+    font-weight: 50;
+}
+
+.title-bold {
+    letter-spacing: 0.2vw;
+}
+
+.volcano {
+    padding: 12px;
+    width: 90px;
+    color: white;
+}
+
+.volcano-container {
+    margin: -20px !important;
+}
+
+.box-row.circles {
+    background-image: url('../assets/circles.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 14vw !important;
+}
+
+.box-row.circles > img {
+    width: 6vw;
+}
+
+.grow { transform: scale(1.2); }
+
+.countdown-overlay {
+    position: fixed;
+    display: initial;
+    margin: 500px 450px;
+    font-size: 175px;
+    color: white;
+    height: inherit;
+}
+
+.countdown-overlay .backdrop {
+    background-color: white !important;
+    margin: -500px -500px;
+    opacity: 0.7;
+    height: -webkit-fill-available;
+}
+
+.countdown-overlay .backdrop .counter {
+    position: fixed;
+    display: block;
+    color: black;
+    font-size: 14vw;
+    margin: 400px 500px;
+    z-index: 6000;
+}
+
+.countdown-overlay .backdrop .ready {
+    position: fixed;
+    display: block;
+    color: black;
+    width: max-content;
+    font-size: 10vw;
+    margin: 500px 250px;
+    z-index: 6000;
+}
+
+.send-email {
+    font-size: 34px;
+    z-index: 9000;
+    position: absolute;
+    margin: -225px -100px;
+    width: max-content;
+}

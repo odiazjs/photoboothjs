@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Team Photobooth</title>
+    
+    <script src="./index.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/flexboxgrid.css">
+    <link rel="stylesheet" type="text/css" href="./css/flexboxgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+</head>
+
+<body class="fadeIn animated bounce delay-1s">
+
+    <div class="row center-xs volcano-container">
+        <div class="col-xs-12
+                col-sm-8
+                col-md-6
+                col-lg-4">
+            <div class="box">
+                <img src='./assets/volcano-white.png' class="volcano">
+            </div>
+        </div>
+    </div>
+
+    <div class="row center-xs">
+        <div class="col-xs-12
+                col-sm-8
+                col-md-6
+                col-lg-4">
+            <div class="box">
+                <h2 class="title-light">POSA CON LAS</h2>
+                <h1 class="title-bold">ESTRELLAS</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center-lg">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row"></div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+            <div class="box-row">
+                <img src="./assets/polaroid_frame.png" width="250px">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row"></div>
+        </div>
+    </div>
+
+    <div class="row center-xs">
+        <div class="col-xs-12
+                col-sm-8
+                col-md-6
+                col-lg-4">
+            <div class="box">
+                <h2 class="title-light">PREPARATE</h2>
+                <h1 class="title-bold">TOMATE UNA FOTO</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center-lg">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row"></div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+            <div id="take-photo" class="box-row animated infinite bounce delay-1s">
+                <a href="/pages/selection.html">
+                    <img src="./assets/camera_icon.png" width="150px">
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row center-lg">
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row"></div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-10">
+            <div class="box-row">
+                <img src="./assets/black.png" width="225px">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-2 col-lg-1">
+            <div class="box-row">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    (function () {
+        function docReady(fn) {
+            // see if DOM is already available
+            if (document.readyState === "loading" || document.readyState === "interactive") {
+                // call on next available tick
+                setTimeout(fn, 250);
+            } else {
+                document.addEventListener("DOMContentLoaded", fn);
+            }
+        }
+        docReady(function () {
+            // DOM is loaded and ready for manipulation here
+            //var canvas = document.getElementById('p5canvas');
+            //canvas.style.display = 'none';
+
+            //Take photo flow
+            let takePhotoDiv = document.getElementById('take-photo');
+            takePhotoDiv.addEventListener('click', (ev) => {
+                //window.location.replace("http://www.w3schools.com");
+            })
+        });
+    })();
+</script>
+
+</html>

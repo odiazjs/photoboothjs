@@ -1,0 +1,15 @@
+{
+  "name": "teamphotobooth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 7000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oscar.diaz@codetenango.com",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.0"
+  }
+}

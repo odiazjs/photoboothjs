@@ -55,7 +55,7 @@
       playerContainers.forEach(container => {
         if (container.classList.contains("grow")) {
             animateCSS(container, 'fadeOutRight', () => {
-                window.location.href = "http://192.168.0.12:7000/pages/photo.html";
+                window.location.href = "http://localhost:7000/pages/photo.html";
             });
         }
       });

@@ -5,7 +5,7 @@ let playing = false;
 let fingers;
 let button;
 
-(function() {
+(function () {
   function docReady(fn) {
     if (
       document.readyState === "loading" ||
@@ -16,7 +16,7 @@ let button;
       document.addEventListener("DOMContentLoaded", fn);
     }
   }
-  docReady(function() {
+  docReady(function () {
     function animateCSS(element, animationName, callback) {
       element.classList.add("animated", animationName);
       function handleAnimationEnd() {
@@ -31,12 +31,12 @@ let button;
     function saveScreenshot() {
       html2canvas(document.getElementById('screenshot'), {
         dpi: 192,
-        onrendered: function(canvas) {
+        onrendered: function (canvas) {
           const dataUrl = canvas.toDataURL("image/png");
-          console.log(dataUrl)
+          //console.log(dataUrl)
           const sendEmail = document.getElementById('sendEmail');
           const encodedUrl = encodeURIComponent(dataUrl);
-          let embedded = 
+          let embedded =
             `mailto:odiaz.dw@gmail.com?subject=Check%20this%20out!&body=%3Cp%3EHi%3C%2Fp%3E%3Cimg%20src%3D%22${encodedUrl}`;
           sendEmail.href = embedded;
           // sendEmail.addEventListener('click', (ev) => {
@@ -66,6 +66,14 @@ let button;
       Webcam.attach("#teamVideo");
     }, 500);
 
+    navigator.mediaDevices.getUserMedia({audio: false, video: true})
+      .then(function(stream) {
+        console.log('Got stream, time diff :', Date.now());
+      })
+      .catch(function(err) {
+        console.log('GUM failed with error, time diff: ', Date.now());
+      });
+
     setTimeout(() => {
       backdrop.style.opacity = 0.3;
       setTimeout(() => {
@@ -89,7 +97,7 @@ let button;
                   // canvas.style.display = 'none';
                   // video.hide();
                   // video.style.display = 'none';
-                  Webcam.snap(function(data_uri) {
+                  Webcam.snap(function (data_uri) {
                     animateCSS(backdrop, "zoomIn");
                     backdrop.style.display = "none";
                     // display results in page
@@ -114,7 +122,7 @@ let button;
             }
           }, 1000);
         }, 5000);
-      }, 1000);
+      }, 5000);
     }, 2000);
   });
 })();

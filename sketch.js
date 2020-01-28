@@ -57,20 +57,21 @@ let button;
 
     //set webcam
     setTimeout(() => {
-      const video = document.getElementById('teamVideo');
       Webcam.set({
-        width: 320,
-        height: 240,
-        image_format: "jpeg",
-        jpeg_quality: 90
+        width: 640,
+        height: 480,
+        image_format: "jpeg"
       });
       Webcam.attach('#teamVideo');
     }, 500);
+
+    teamVideo.hide
 
     const sendEmail = document.getElementById('send-email');
     sendEmail.style.display = 'none';
 
     setTimeout(() => {
+      teamVideo.hide();
       backdrop.style.opacity = 0.3;
       setTimeout(() => {
         teamVideo.loop();
@@ -95,7 +96,6 @@ let button;
                     // display results in page
                     const screenshot = document.getElementById("screenshot");
                     screenshot.style.display = "";
-                    screenshot.style.margin = "-175px";
                     screenshot.innerHTML =
                       '<img src="' +
                       data_uri +
@@ -122,7 +122,7 @@ let button;
 
 function setup() {
   // Team greenscreen video
-  teamVideo = createVideo(["../assets/photo1.mp4"]);
+  teamVideo = createVideo(["../assets/sideplayer2.mp4"]);
   teamVideo.id("teamVideo");
 
   //button = createButton('play');

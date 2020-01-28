@@ -103,7 +103,7 @@ body {
 
 .countdown-overlay .backdrop {
     background-color: white !important;
-    margin: 0vw -200vw;
+    margin: 0vw -150vw;
     opacity: 0.7;
     height: -webkit-fill-available;
 }
@@ -112,8 +112,8 @@ body {
     position: fixed;
     display: block;
     color: black;
-    font-size: 14vw;
-    margin: 400px 500px;
+    font-size: 18vw;
+    margin: -15vw 65vw;
     z-index: 6000;
 }
 
@@ -123,7 +123,7 @@ body {
     color: black;
     width: max-content;
     font-size: 14vw;
-    margin: 75vw 192vw;
+    margin: 75vw 160vw;
     z-index: 6000;
 }
 

@@ -65,8 +65,6 @@ let button;
       Webcam.attach('#teamVideo');
     }, 500);
 
-    teamVideo.hide();
-
     setTimeout(() => {
       teamVideo.hide();
       backdrop.style.opacity = 0.3;
@@ -104,8 +102,14 @@ let button;
                           Enviar a Correo
                         </button>
                       </div>`;
+                    
+                    if (teamVideo) {
+                      teamVideo.hide();
+                      document.getElementById('p5canvas').style.display = 'none';
+                      document.getElementById('p5video').style.display = 'none';
+                    }
                     animateCSS(screenshot, "flip", () => {
-                      saveScreenshot();
+                      //saveScreenshot();
                       const sendEmail = document.getElementById('send-email');
                       sendEmail.style.display = '';
                     });

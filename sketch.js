@@ -74,7 +74,7 @@ let button;
       teamVideo.hide();
       backdrop.style.opacity = 0.3;
       setTimeout(() => {
-        teamVideo.loop();
+        teamVideo.play();
         setTimeout(() => {
           const interval = setInterval(() => {
             number = number - 1;
@@ -100,7 +100,7 @@ let button;
                       '<img src="' +
                       data_uri +
                       '"/>' +
-                      '<img src="../assets/finalframe_3.png" width="320" style="margin: -240px 0px;">';
+                      '<img src="../assets/finalfinal.png" width="640" style="margin: -475px -90px;">';
                     animateCSS(screenshot, "zoomIn", () => {
                       saveScreenshot();
                       sendEmail.style.display = '';

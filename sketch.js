@@ -65,10 +65,7 @@ let button;
       Webcam.attach('#teamVideo');
     }, 500);
 
-    teamVideo.hide
-
-    const sendEmail = document.getElementById('send-email');
-    sendEmail.style.display = 'none';
+    teamVideo.hide();
 
     setTimeout(() => {
       teamVideo.hide();
@@ -100,9 +97,16 @@ let button;
                       '<img src="' +
                       data_uri +
                       '" style="width: 480px; height: 640px;"/>' +
-                      '<img src="../assets/finalfinal.png" width="640" style="margin: -460px -30px;">';
+                      `<img src="../assets/finalfinal.png" width="640" style="margin: -460px -30px;">` + 
+                      `<div id="send-email" class="send-email" style="display:none;">
+                        <button class="btn">
+                          <i class="fa fa-envelope-square"></i> 
+                          Enviar a Correo
+                        </button>
+                      </div>`;
                     animateCSS(screenshot, "flip", () => {
                       saveScreenshot();
+                      const sendEmail = document.getElementById('send-email');
                       sendEmail.style.display = '';
                     });
                   });

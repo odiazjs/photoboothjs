@@ -132,11 +132,20 @@ body {
     font-size: 34px;
     z-index: 9000;
     position: absolute;
-    margin: -225px -100px;
+    margin: 2vw 16vw;
     width: max-content;
 }
 
 #screenshot {
-    margin: 50vw 18vw;
+    margin: 30vw 18vw;
     border: 10px solid;
 }
+
+.btn {
+    background-color: brown;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 4vw;
+    cursor: pointer;
+  }

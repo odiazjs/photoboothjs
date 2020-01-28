@@ -1118,7 +1118,7 @@
         cb = arguments[i];
       }
     }
-    if (navigator.getUserMedia) {
+    if (navigator.mediaDevices.getUserMedia || navigator.getUserMedia) {
       var elt = document.createElement('video');
 
       if (!constraints) {

@@ -57,27 +57,23 @@ let button;
 
     //set webcam
     setTimeout(() => {
+      const video = document.getElementById('teamVideo');
       Webcam.set({
         width: 320,
         height: 240,
         image_format: "jpeg",
         jpeg_quality: 90
       });
-      Webcam.attach("#teamVideo");
+      Webcam.attach('#teamVideo');
     }, 500);
 
-    navigator.mediaDevices.getUserMedia({audio: false, video: true})
-      .then(function(stream) {
-        console.log('Got stream, time diff :', Date.now());
-      })
-      .catch(function(err) {
-        console.log('GUM failed with error, time diff: ', Date.now());
-      });
+    const sendEmail = document.getElementById('send-email');
+    sendEmail.style.display = 'none';
 
     setTimeout(() => {
       backdrop.style.opacity = 0.3;
       setTimeout(() => {
-        teamVideo.play();
+        teamVideo.loop();
         setTimeout(() => {
           const interval = setInterval(() => {
             number = number - 1;
@@ -93,10 +89,6 @@ let button;
                 backdrop.style.opacity = 1;
                 animateCSS(backdrop, "fadeInUp");
                 setTimeout(() => {
-                  // canvas.hide();
-                  // canvas.style.display = 'none';
-                  // video.hide();
-                  // video.style.display = 'none';
                   Webcam.snap(function (data_uri) {
                     animateCSS(backdrop, "zoomIn");
                     backdrop.style.display = "none";
@@ -111,6 +103,7 @@ let button;
                       '<img src="../assets/finalframe_3.png" width="320" style="margin: -240px 0px;">';
                     animateCSS(screenshot, "zoomIn", () => {
                       saveScreenshot();
+                      sendEmail.style.display = '';
                     });
                   });
                 }, 2000);
@@ -122,7 +115,7 @@ let button;
             }
           }, 1000);
         }, 5000);
-      }, 5000);
+      }, 2000);
     }, 2000);
   });
 })();
@@ -131,10 +124,6 @@ function setup() {
   // Team greenscreen video
   teamVideo = createVideo(["../assets/photo1.mp4"]);
   teamVideo.id("teamVideo");
-
-  setTimeout(() => {
-    teamVideo.hide();
-  }, 250);
 
   //button = createButton('play');
   //button.mousePressed(toggleVid);

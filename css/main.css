@@ -132,12 +132,12 @@ body {
     font-size: 34px;
     z-index: 9000;
     position: absolute;
-    margin: 2vw 16vw;
+    margin: 16vw;
     width: max-content;
 }
 
 #screenshot {
-    margin: 30vw 18vw;
+    margin: 30vw 25vw;
     border: 10px solid;
 }
 

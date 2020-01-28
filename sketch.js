@@ -97,7 +97,7 @@ let button;
                       '<img src="' +
                       data_uri +
                       '" style="width: 480px; height: 640px;"/>' +
-                      `<img src="../assets/finalfinal.png" width="640" style="margin: -460px -30px;">` + 
+                      `<img src="../assets/finalfinal.png" width="640" style="margin: -460px -75px;">` + 
                       `<div id="send-email" class="send-email" style="display:none;">
                         <button class="btn">
                           <i class="fa fa-envelope-square"></i> 

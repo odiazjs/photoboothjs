@@ -100,7 +100,7 @@ let button;
                       '<img src="' +
                       data_uri +
                       '"/>' +
-                      '<img src="../assets/finalfinal.png" width="480" style="margin: -460px -30px;">';
+                      '<img src="../assets/finalfinal.png" width="640" style="margin: -460px -30px;">';
                     animateCSS(screenshot, "flip", () => {
                       saveScreenshot();
                       sendEmail.style.display = '';

@@ -99,7 +99,7 @@ let button;
                     screenshot.innerHTML =
                       '<img src="' +
                       data_uri +
-                      '"/>' +
+                      '" style="width: 640px; height: 480px;"/>' +
                       '<img src="../assets/finalfinal.png" width="640" style="margin: -460px -30px;">';
                     animateCSS(screenshot, "flip", () => {
                       saveScreenshot();
